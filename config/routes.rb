@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # Resources
   resources "sessions"
   resources "users"
-  resources "posts"rail
+  resources "posts"
   
   # Login/out
   get "/login", :controller => "sessions", :action => "new"
