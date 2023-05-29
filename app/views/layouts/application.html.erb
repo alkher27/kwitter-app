@@ -17,15 +17,20 @@
   </head>
 
   <body>
-    <div class="unicorn">
-      <p>
-        <% if @current_user %>
-          <%= @current_user["first_name"] %>
-          <a href="/logout">Logout</a>
-        <% else %>
-          <a href="/login">Login</a> | <a href="/users/new">Signup</a>
-        <% end %>
-      </p>
+    <nav class="navbar bg-primary mb-3" data-bs-theme="dark">
+      <div class="container-fluid">
+      <a class="navbar-brand" href="/">Kwitter</a>
+        <span class="navbar-text">
+          <% if @current_user %>
+            <%= @current_user["first_name"] %>
+            <a href="/logout">Logout</a>
+          <% else %>
+            <a href="/login">Login</a> | <a href="/users/new">Signup</a>
+          <% end %>
+        </span>
+      </div>
+    </nav>
+    <div class="container">
 
       <p>
         <%= flash["notice"] %>
